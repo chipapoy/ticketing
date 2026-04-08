@@ -173,12 +173,12 @@ const Login = () => {
           <div className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
             <Image
               className="h-15 w-15 inline mr-4"
-              src="https://drive.google.com/uc?export=view&id=1BH-6wklnPTMvRq6MaNiWAFn6IuKT_d2s"
+              src="/tmg.png"
               width={100}
               height={100}
               alt="The Moment Group"
             />
-            Ticketing System - Prod Mirror
+            Ticketing System
           </div>
         </div>
         <div className="mt-10 space-y-6 sm:mx-auto sm:w-full sm:max-w-sm">
