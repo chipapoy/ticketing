@@ -36,3 +36,4 @@ next-env.d.ts
 
 # db
 /src/app/api/connections
+/src/app/Test
