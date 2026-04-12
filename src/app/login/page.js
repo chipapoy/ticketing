@@ -29,20 +29,16 @@ const Login = () => {
     if (localStorage.getItem('id') !== null) {
       router.push('/dashboard')
     }
-  }, [])
+  }, []);
 
-  // useEffect(()=>{
-  //   console.log(user.password)
-  // },[user.password])
+  
   
   const modalCallback = (data) => {
-
+    
     setOpenModal(data.open)
-
     if(data.passwordUpdated){
       window.location.reload()
     }
-
   }
 
   const handleForm = (e) => {
@@ -86,9 +82,9 @@ const Login = () => {
           const data = response.data.result[0];
 
           if (data.is_default_pass == 1) {
-            setIsLoading(false)
-            setOpenModal(true)
-            setUserId(data.id)
+            setIsLoading(false);
+            setOpenModal(true);
+            setUserId(data.id);
           }
           else {
             localStorage.setItem('id', data.id);
@@ -105,7 +101,7 @@ const Login = () => {
               login_date: moment().format('YYYY-MM-DD HH:mm')
             })
 
-            // setIsLoading(true)
+            setIsLoading(true);
 
             switch (data.role_id) {
               case 1:
@@ -231,8 +227,13 @@ const Login = () => {
           </form>
         </div>
       </div>
-      <Form_renew_password isOpen={openModal} modalCallback={modalCallback} userId={userId}/>
-      <ToastContainer />
+      <div>
+        <Form_renew_password isOpen={openModal} modalCallback={modalCallback} userId={userId} />
+      </div>
+      <div>
+        <ToastContainer />
+      </div>
+      
     </div>
   )
 }
