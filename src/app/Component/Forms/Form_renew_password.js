@@ -168,12 +168,8 @@ export default function FormDialog(props) {
             <Button variant="outlined" color="success" disabled={disableBtn} type='submit'>Submit</Button>
             <Button variant="outlined" color="error" disabled={disableBtn} onClick={handleClose}>Cancel</Button>
           </DialogActions>
-
-
         </form>
-
       </Dialog>
-
     </React.Fragment>
   );
 }
