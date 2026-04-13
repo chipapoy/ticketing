@@ -87,14 +87,15 @@ const Login = () => {
             setUserId(data.id);
           }
           else {
-            localStorage.setItem('id', data.id);
-            localStorage.setItem('name', data.name);
-            localStorage.setItem('email_add', data.email_add);
-            localStorage.setItem('username', data.username);
-            localStorage.setItem('role_id', data.role_id);
-            localStorage.setItem('tech_id', data.tech_id);
 
-            // localStorage.setItem('data',JSON.stringify(data))
+            if (typeof window !== 'undefined') {
+              localStorage.setItem('id', data.id);
+              localStorage.setItem('name', data.name);
+              localStorage.setItem('email_add', data.email_add);
+              localStorage.setItem('username', data.username);
+              localStorage.setItem('role_id', data.role_id);
+              localStorage.setItem('tech_id', data.tech_id);
+            }
 
             accessLogsHandler({
               username: data.username,
@@ -175,6 +176,7 @@ const Login = () => {
               alt="The Moment Group"
             />
             Ticketing System
+           
           </div>
         </div>
         <div className="mt-10 space-y-6 sm:mx-auto sm:w-full sm:max-w-sm">
